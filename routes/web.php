@@ -5,11 +5,24 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Welcome');
-})->name('home');
+})->name('home old');
 
 Route::get('/copy', function () {
-    return Inertia::render('Welcome_copy');
-})->name('home copy');
+    return Inertia::render('WelcomeNew');
+})->name('home new');
+
+Route::get('/home', function (){
+    return view('home');
+})->name('home');
+
+Route::get('/about', function (){
+    return view('about');
+})->name('about');
+
+Route::get('/contact', function (){
+    return view('contact');
+})->name('contact');
+
 
 Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
