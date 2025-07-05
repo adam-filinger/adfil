@@ -1,6 +1,5 @@
 <x-layout>
-
-    <h1>Contact</h1>
+    <x-slot:heading>Contact</x-slot:heading>
     <p>If you have any questions, feel free to reach out!</p>
     <ul>
         <li>Email: <a href="mailto:adam.filinger@gmail.com">adam.filinger@gmail.com</a>
