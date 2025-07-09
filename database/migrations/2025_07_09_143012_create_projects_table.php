@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('skills', function (Blueprint $table) {
-            $table->id()->autoIncrement();
+        Schema::create('projects', function (Blueprint $table) {
+            $table->id();
             $table->string('name');
-            $table->string('experience');
-            $table->string('projects')->nullable(); // Assuming this is a string to hold project names or descriptions
+            $table->string('description');
+            $table->foreignIdFor(App\Models\Skill::class);
             $table->timestamps();
-            ;
         });
     }
 
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('skills');
+        Schema::dropIfExists('projects');
     }
 };

@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:heading>Contact</x-slot:heading>
-    <p>If you have any questions, feel free to reach out!</p>
+    <p>{{ $content->where('position','main')->first()->content }}</p>
     <ul>
         <strong><li>Email:</strong> <a href="mailto:adam.filinger@gmail.com">adam.filinger@gmail.com</a>
         <strong><li>Phone:</strong> 737 584 114

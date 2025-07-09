@@ -9,18 +9,16 @@
     <script src='main.js'></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="h-full">
+<body class="h-full bg-gray-800 text-white">
     <div class="min-h-full">
-  <nav class="bg-gray-800">
+  <nav class="bg-gray-800 content-between">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
-        <div class="flex items-center">
           <div class="shrink-0">
             <img class="size-20" src="{{ asset('Untitled.svg') }}" alt="Your Company" />
-          </div>
-          <x-navigation />
         </div>
-        <div class="hidden md:block">
+        <x-navigation />
+        <div class="hidden md:block ml-20">
           <div class="ml-4 flex items-center md:ml-6">
             <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
               <span class="absolute -inset-1.5"></span>
@@ -63,9 +61,9 @@
     <!-- Mobile menu, show/hide based on menu state. -->
   </nav>
 
-  <header class="bg-white shadow-sm">
+  <header class="bg-gray-800 shadow-sm">
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{$heading}}</h1>
+      <h1 class="text-3xl font-bold tracking-tight">{{$heading}}</h1>
     </div>
   </header>
   <main>
